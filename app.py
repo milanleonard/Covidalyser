@@ -7,7 +7,7 @@ COVID_DATABASE_URL = 'https://www.covid19.act.gov.au/act-status-and-response/act
 
 st.set_page_config(page_title='CovidAlyzer')
 
-
+print('')
 def _get_webdriver():
     fireFoxOptions = webdriver.FirefoxOptions()
     fireFoxOptions.headless = True
