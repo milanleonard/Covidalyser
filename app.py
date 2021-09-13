@@ -3,6 +3,7 @@
 from helpers import *
 import streamlit as st
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+import os
 
 COVID_DATABASE_URL = 'https://www.covid19.act.gov.au/act-status-and-response/act-covid-19-exposure-locations'
 
