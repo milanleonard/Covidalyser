@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: cd Covidalyser && streamlit hello 
+  web: cd Covidalyser && /bin/sh setup.sh && streamlit hello 
