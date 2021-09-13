@@ -14,10 +14,9 @@ def _get_webdriver():
     driver = webdriver.Firefox('./',options=fireFoxOptions)
     return driver
 
-
+driver = _get_webdriver()
 @st.cache()
 def collect_data_cached(url):  
-    driver = _get_webdriver()
     driver.get(url)
     time.sleep(2)
     html = driver.page_source
