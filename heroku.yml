@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: sh setup.sh && streamlit hello 
+  web: streamlit hello 
