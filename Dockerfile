@@ -11,6 +11,7 @@ RUN tar -xvzf geckodriver*
 RUN chmod +x geckodriver
 RUN git clone https://github.com/milanleonard/Covidalyser
 RUN sudo mv geckodriver /usr/bin/
+RUN sudo useradd testacct
 RUN pip install bs4
 RUN pip install streamlit
 RUN pip install lxml
