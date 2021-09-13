@@ -13,4 +13,5 @@ RUN git clone https://github.com/milanleonard/Covidalyser
 RUN sudo mv geckodriver /usr/bin/
 RUN pip install bs4
 RUN pip install streamlit
+RUN pip install lxml
 RUN pip install selenium
