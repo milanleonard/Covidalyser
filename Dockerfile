@@ -15,5 +15,4 @@ RUN pip install bs4
 RUN pip install streamlit
 RUN pip install lxml
 RUN pip install selenium
-RUN sudo useradd TEMP
 
