@@ -1,5 +1,0 @@
-build:
-  docker:
-    web: Dockerfile
-run:
-  web: cd Covidalyser && /bin/sh setup.sh && streamlit run app.py 
