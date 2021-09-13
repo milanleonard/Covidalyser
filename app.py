@@ -9,10 +9,20 @@ st.set_page_config(page_title='CovidAlyzer')
 
 print('')
 def _get_webdriver():
-    fireFoxOptions = webdriver.FirefoxOptions()
-    fireFoxOptions.headless = True
-    driver = webdriver.Firefox(options=fireFoxOptions)
-    return driver
+    options = webdriver.FirefoxOptions()
+    options.add_argument("-remote-debugging-port=9224")
+    options.add_argument("-headless")
+    options.add_argument("-disable-gpu")
+    options.add_argument("-no-sandbox")
+
+    binary = FirefoxBinary(os.environ.get('FIREFOX_BIN'))
+
+    firefox_driver = webdriver.Firefox(
+		firefox_binary=binary,
+		executable_path=os.environ.get('GECKODRIVER_PATH'),
+		options=options)
+
+    return firefox_driver
 
 driver = _get_webdriver()
 @st.cache()
