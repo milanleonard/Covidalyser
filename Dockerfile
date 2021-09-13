@@ -9,4 +9,3 @@ RUN sudo apt install firefox -y
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
 RUN tar -xvzf geckodriver*
 RUN chmod +x geckodriver
-RUN sudo mv geckodriver /usr/local/bin/
