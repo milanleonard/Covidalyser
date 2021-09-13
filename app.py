@@ -11,7 +11,7 @@ st.set_page_config(page_title='CovidAlyzer')
 def _get_webdriver():
     fireFoxOptions = webdriver.FirefoxOptions()
     fireFoxOptions.headless = True
-    driver = webdriver.Firefox('./geckodriver',options=fireFoxOptions)
+    driver = webdriver.Firefox('./',options=fireFoxOptions)
     return driver
 
 
