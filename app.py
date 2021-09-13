@@ -2,7 +2,7 @@
 
 from helpers import *
 import streamlit as st
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+from selenium import webdriver
 import os
 
 COVID_DATABASE_URL = 'https://www.covid19.act.gov.au/act-status-and-response/act-covid-19-exposure-locations'
@@ -11,18 +11,12 @@ st.set_page_config(page_title='CovidAlyzer')
 
 print('')
 def _get_webdriver():
-    options = webdriver.FirefoxOptions()
-    options.add_argument("-remote-debugging-port=9224")
+    options = webdriver.ChromeOptions()
     options.add_argument("-headless")
     options.add_argument("-disable-gpu")
-    options.add_argument("-no-sandbox")
 
-    binary = FirefoxBinary(os.environ.get('FIREFOX_BIN'))
 
-    firefox_driver = webdriver.Firefox(
-		firefox_binary=binary,
-		executable_path=os.environ.get('GECKODRIVER_PATH'),
-		options=options)
+    firefox_driver = webdriver.Chrome(options=options)
 
     return firefox_driver
 
