@@ -9,5 +9,7 @@ RUN sudo apt install firefox -y
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
 RUN tar -xvzf geckodriver*
 RUN chmod +x geckodriver
+RUN git clone https://github.com/milanleonard/Covidalyser
+RUN cd Covidalyser
 RUN pip install streamlit
 RUN pip install selenium
