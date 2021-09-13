@@ -10,6 +10,7 @@ st.set_page_config(page_title='CovidAlyzer')
 print('')
 def _get_webdriver():
     fireFoxOptions = webdriver.FirefoxOptions()
+    fireFoxOptions.add_argument("--no-sandbox")
     fireFoxOptions.headless = True
     driver = webdriver.Firefox('./',options=fireFoxOptions)
     return driver
