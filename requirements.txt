@@ -1,4 +1,5 @@
 selenium
+lxml
 bs4
 requests
 streamlit
