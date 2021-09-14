@@ -36,7 +36,7 @@ def check_shop(data, shop):
     else:
         print("Finding a specific shop")
         for substr in shop.split(' '):
-            shopping_data = data[data['Exposure Location'].str.contains(substr, case=False)]
+            shopping_data = shopping_data[shopping_data['Exposure Location'].str.contains(substr, case=False)]
     if len(shopping_data) == 0:
         print("Shop not found")
     return shopping_data.copy()

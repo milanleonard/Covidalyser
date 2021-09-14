@@ -14,8 +14,6 @@ def _get_webdriver():
     options = webdriver.ChromeOptions()
     options.add_argument("-headless")
     options.add_argument("-disable-gpu")
-
-
     firefox_driver = webdriver.Chrome(options=options)
 
     return firefox_driver
